@@ -1,8 +1,37 @@
-#board {
-  margin-top: 10px;
+h1 {
+  margin-left:-15px;
+  text-align: center;
+  color: yellow;
+}
+.box {
+  border: 10px solid red;
+  border-radius: 10px;
+  margin:4px;
+  width:200px;
+  height:200px;
+  font-size:400%;
+  padding-top:10px;
 }
 
-.box {
-  border: 1px solid black;
-  height: 150px;
+.board {
+  margin: 0 auto;
+  display: block;
+  width:600px;
+}
+
+#restart {
+  margin-top:20px;
+  margin-left:-18px;
+}
+
+.won {
+  background-color:red;
+}
+
+body {
+  background: url(https://i.ytimg.com/vi/tEA-kf9utek/maxresdefault.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
