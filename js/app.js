@@ -2,8 +2,16 @@
 $(document).ready(function() {
   // all code to manipulate the DOM
   // goes inside this function
+  $(".box").on("click", function () {
+    if ($(this).text() === "") {
+      $(this).text (turn);
+      changeTurn();
+    $(this).addClass(turn);
+    moves +=1;
+    }
+  });
 
-  var $boxes = $('.box');
+  var boxes = $('.box');
 
   // player "X" always goes first, and player "O" always goes second
   var turn = "X";
@@ -14,14 +22,17 @@ $(document).ready(function() {
   // helper function to reset the game
   var resetGame = function() {
     // reset the board itself
-    $boxes.text("");
-    $boxes.removeClass("X");
-    $boxes.removeClass("O");
-
+    box.text("");
+    box.removeClass("X");
+    box.removeClass("O");
+  };
+  $ ('#restart').on('click', function () {
+ console.log("Button got clicked");
+ resetGame();
     // reset the variables that track game progress
     turn = "X";
     moves = 0;
-  };
+  });
 
   // helper function to change turn to the next player
   var changeTurn = function() {
@@ -32,14 +43,14 @@ $(document).ready(function() {
     }
   };
 
-};
+});
 
 //////
 //////
 //////
 
 // listen for clicks on each box to play the game
-  $boxes.on('click', function() {
+  boxes.on('click', function() {
     // check if this box is already claimed
     if ($(this).text() === "") {
 
@@ -72,4 +83,4 @@ $(document).ready(function() {
   });
 
 
-});
+// });
